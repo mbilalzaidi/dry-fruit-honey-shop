@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shop thoughtfully sourced dry fruits and golden, small-batch honey at Nut & Nectar."
+    />
+    <title>Nut & Nectar — Nature's little luxuries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      Demo storefront · Products, prices, and shipping offers are examples
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Nut and Nectar home">
+        <span class="brand-mark" aria-hidden="true">n<span>&</span>n</span>
+        <span class="brand-name">nut <i>&</i> nectar</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop all</a>
+        <a href="#shop" data-nav-category="Nuts">Dry fruits</a>
+        <a href="#shop" data-nav-category="Honey">Honey</a>
+        <a href="#story">Our story</a>
+      </nav>
+      <div class="header-actions">
+        <label class="search-box">
+          <span class="sr-only">Search products</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+          <input id="search-input" type="search" placeholder="Search..." />
+        </label>
+        <button class="cart-button" id="open-cart" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+          <span>Bag</span><span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> GOOD THINGS GROW NATURALLY</p>
+          <h1>A little closer<br />to <em>nature.</em></h1>
+          <p class="hero-description">
+            Sun-kissed fruits, honest honey, and everyday goodness from people who care.
+          </p>
+          <a class="button button-dark" href="#shop">Shop the collection <span aria-hidden="true">↗</span></a>
+          <div class="hero-note">
+            <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span></div>
+            <div><strong>Made for sharing</strong><small>Real food. Really good.</small></div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-image" role="img" aria-label="A colorful spread of nuts, dried fruit and honey"></div>
+          <div class="hero-sticker"><span>GOODNESS<br />IN EVERY<br />LITTLE BITE</span><span class="sticker-star">✳</span></div>
+          <div class="hero-caption"><span>01 / 03</span><span>From earth, with love</span></div>
+        </div>
+        <div class="hero-side-note">SIMPLE INGREDIENTS · BEAUTIFULLY SOURCED</div>
+      </section>
+
+      <section class="benefits" aria-label="Our promises">
+        <div><span class="benefit-icon">✳</span><span><strong>Nothing artificial</strong><small>Just the good stuff</small></span></div>
+        <div><span class="benefit-icon">⌁</span><span><strong>Thoughtfully sourced</strong><small>From people we know</small></span></div>
+        <div><span class="benefit-icon">♡</span><span><strong>Packed with care</strong><small>Fresh to your doorstep</small></span></div>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE GOOD STUFF</p><h2>Find your <em>favorite.</em></h2></div>
+          <a href="#shop" class="text-link" id="view-all">View all products <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="shop-toolbar">
+          <div class="filters" role="group" aria-label="Filter products">
+            <button class="filter-chip active" data-category="All">All goodies <span>06</span></button>
+            <button class="filter-chip" data-category="Nuts">Dry fruits</button>
+            <button class="filter-chip" data-category="Honey">Honey</button>
+            <button class="filter-chip" data-category="Bundles">Bundles</button>
+          </div>
+          <label class="sort-label">Sort by
+            <select id="sort-select" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+            </select>
+          </label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No goodies found. Try another search.</p>
+      </section>
+
+      <section class="story-section" id="story">
+        <div class="story-image" role="img" aria-label="Honey being poured into a small bowl"></div>
+        <div class="story-copy">
+          <p class="eyebrow">A GOOD THING, SHARED</p>
+          <h2>From the hive<br />to your <em>happy place.</em></h2>
+          <p>We believe the best things are made slowly, sourced kindly, and shared generously. Every jar and handful tells a story of good people and the places they call home.</p>
+          <a class="text-link" href="#shop">Get to know our goodness <span aria-hidden="true">→</span></a>
+          <span class="story-doodle" aria-hidden="true">✳</span>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div><p class="eyebrow">A LITTLE NOTE FROM US</p><h2>Good things in your inbox.</h2><p>Newsletter signup is not yet available in this demo.</p></div>
+        <form id="newsletter-form" class="newsletter-form">
+          <label class="sr-only" for="email-input">Your email address</label>
+          <input id="email-input" type="email" placeholder="Your email address" required />
+          <button type="submit" aria-label="Subscribe">Join us <span aria-hidden="true">→</span></button>
+          <p id="newsletter-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">n<span>&</span>n</span><span class="brand-name">nut <i>&</i> nectar</span></a>
+      <p>Nature's little luxuries. Made to be shared.</p>
+      <span>© 2025 Nut & Nectar</span>
+    </footer>
+
+    <div class="overlay" id="cart-overlay" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-modal="true" role="dialog" aria-hidden="true">
+      <div class="cart-header"><div><p class="eyebrow">YOUR GOODIES</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="icon-button" id="close-cart" aria-label="Close shopping bag">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span>♡</span><p>Your bag is taking a little nap.</p><button class="text-link" id="continue-shopping">Find some goodness <span aria-hidden="true">→</span></button></div>
+      <div class="cart-footer" id="cart-footer">
+        <p class="shipping-note" id="shipping-note"></p>
+        <div class="subtotal"><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div>
+        <small>Shipping and taxes calculated at checkout.</small>
+        <button class="button button-dark checkout-button" id="checkout-button">Continue to checkout <span aria-hidden="true">→</span></button>
+      </div>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
